@@ -1,26 +1,26 @@
 package product;
 import java.util.Objects;
-public class Produtos {
+public class Produto {
 
     private String name;
     private String code;
     private double price;
 
-    public Produtos(String name, String code, double price) {
+    public Produto(String name, String code, double price) {
         this.name = name;
         this.code = code;
         this.price = price;
     }
 
     public String toString(){
-        return "produtos: " + name + "code: " + code +  "price: R$" + String.format("%2f", price);
+        return "produto:" + name + "  code:" + code +  "  price:R$" + String.format("%.2f", price);
     }
 
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        Produtos other = (Produtos) obj;
+        Produto other = (Produto) obj;
         return Objects.equals(code, other.code);
     }
 
